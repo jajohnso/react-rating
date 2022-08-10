@@ -1,0 +1,44 @@
+.rating {
+    --ratingEmpty: #{$COLOR_WHITE};
+    --ratingFull: #{$RATING_COLOR};
+
+    display: flex;
+    align-content: center;
+}
+
+.rating__graphic {
+    display: flex;
+
+    svg {
+        stroke: $RATING_COLOR;
+        stroke-width: 1px;
+        height: 22px; // control the size of the icons here
+        width: auto;
+        paint-order: stroke;
+        margin-left: 1px;
+    }
+}
+
+.rating__value {
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 10px;
+}
+
+.rating__tooltip {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    .toolTip__trigger {
+        display: block;
+        height: 16px;
+        width: 16px;
+        background-image: url(/theme-assets/infoIcon.svg);
+    }
+
+    .toolTip__triggerText {
+        @include VISUALLY_HIDDEN;
+    }
+}
